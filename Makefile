@@ -72,11 +72,11 @@ report.tex: report.tmpl
 report.pdf: image report.tex
 	pdflatex report.tex
 	rm report.aux report.log
-	mkdir stuff
-	mv $(FILES) stuff
+	mkdir extras
+	mv $(FILES) extras
 
 #recipe for deleting all the above files (in case the Makefile is updated)
 clean:
-	rm -r stuff report.pdf
+	rm -r extras report.pdf
 
 .PHONY: clean

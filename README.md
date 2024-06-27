@@ -10,7 +10,7 @@ Steps to generate weather report PDF of different city:-
 
 # Dependency
 
-Uses `pdftex` to render LaTeX into PDF. Last tested with:-\
+Uses `pdftex` to render LaTeX into PDF. Last tested with:-
 ```sh
 pdfTeX 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian)
 kpathsea version 6.3.1

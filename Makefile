@@ -58,7 +58,7 @@ image.png:
 	IMG=`curl $(URL) | sed -n 's/<img src="//p' | awk '{print $$1}' | sed 's/^[<.].*//' | tr -d \" | tr -d [:space:]`;\
 	curl "https://forecast.weather.gov/$$IMG" -o image.png
 
-#recipe for LaTex file with current temperature substituted in the template file
+#recipe for LaTeX file with current temperature substituted in the template file
 report.tex: report.tmpl
 	CITY=`curl $(URL) | sed -nE 's/<h2 class="panel-title">(.*)<\/h2>/\1/p' | head -1 | sed -E 's/(.*), .*/\1/'`;\
 	LOC=`curl $(URL) | sed -nE 's/<h2 class="panel-title">(.*)<\/h2>/\1/p' | head -1 | sed -E 's/.*, (.*)/\1/'`;\

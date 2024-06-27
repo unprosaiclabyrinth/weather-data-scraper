@@ -1,8 +1,7 @@
 # Usage
 
-Command to generate weather report PDF:-\
-`	make report.pdf`
+Command to generate weather report PDF: `make report.pdf`
 
-Steps to generate weather report PDF of particular city in USA:-
+Steps to generate weather report PDF of different city:-
 1. Put appropriate web URL in Makefile.
 2. Use command: `make report.pdf`

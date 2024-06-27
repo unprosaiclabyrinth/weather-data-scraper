@@ -54,7 +54,7 @@ report.tmpl:
 	echo "\\\end{document}"                                                                            >> report.tmpl
 
 #recipe for the (illustration of weather conditions) image
-image:
+image.png:
 	IMG=`curl $(URL) | sed -n 's/<img src="//p' | awk '{print $$1}' | sed 's/^[<.].*//' | tr -d \" | tr -d [:space:]`;\
 	curl "https://forecast.weather.gov/$$IMG" -o image.png
 
@@ -69,7 +69,7 @@ report.tex: report.tmpl
 	cat report.tmpl | envsubst > report.tex
 
 #recipe for final pdf report
-report.pdf: image report.tex clean
+report.pdf: image.png report.tex clean
 	pdflatex report.tex
 	rm report.aux report.log
 	mkdir extras

@@ -13,6 +13,8 @@ URL="https://forecast.weather.gov/MapClick.php?lat=41.8843&lon=-87.6324\#.Y6GmiO
 #Los Angeles, CA
 #URL="https://forecast.weather.gov/MapClick.php?lat=33.9425&lon=-118.409\#.Y6GnQuxBy3I"
 
+all: report.pdf
+
 #recipe for the report template file (writes template line-by-line)
 report.tmpl:
 	echo "\\documentclass{article}"                                                                    >> report.tmpl

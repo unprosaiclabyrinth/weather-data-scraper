@@ -69,7 +69,7 @@ report.tex: report.tmpl
 	cat report.tmpl | envsubst > report.tex
 
 #recipe for final pdf report
-report.pdf: image report.tex
+report.pdf: image report.tex clean
 	pdflatex report.tex
 	rm report.aux report.log
 	mkdir extras
@@ -77,6 +77,6 @@ report.pdf: image report.tex
 
 #recipe for deleting all the above files (in case the Makefile is updated)
 clean:
-	rm -r extras report.pdf
+	rm -fr extras report.pdf
 
 .PHONY: clean

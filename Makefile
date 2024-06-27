@@ -76,3 +76,5 @@ report.pdf: image report.tex
 #recipe for deleting all the above files (in case the Makefile is updated)
 clean:
 	rm -r stuff report.pdf
+
+.PHONY: clean

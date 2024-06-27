@@ -15,41 +15,41 @@ URL="https://forecast.weather.gov/MapClick.php?lat=41.8843&lon=-87.6324\#.Y6GmiO
 
 #recipe for the report template file
 report.tmpl:
-	echo "\\documentclass{article}" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\usepackage{fancyhdr}" >> report.tmpl
-	echo "\\usepackage{gensymb}" >> report.tmpl
-	echo "\\usepackage{float}" >> report.tmpl
-	echo "\\usepackage{graphicx}" >> report.tmpl
-	echo "\\usepackage{caption}" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\pagestyle{myheadings}" >> report.tmpl
-	echo "\\\fancyhf{}" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\\title{\$$CITY Weather Forecast}" >> report.tmpl
-	echo "\\\author{National Weather Service}" >> report.tmpl
-	echo "\\\rhead{National Oceanic and Atmospheric Administration}" >> report.tmpl
-	echo "\\lhead{7-Day Forecast}" >> report.tmpl
-	echo "\\\rfoot{forecast.weather.gov}" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\\newcommand\\loc{\$$LOC}" >> report.tmpl
-	echo "\\\newcommand\\\currtempf{\$$CURRTEMPF}" >> report.tmpl
-	echo "\\\newcommand\\\currtempc{\$$CURRTEMPC}" >> report.tmpl
-	echo "\\\newcommand\\\weather{\$$WEATHER}" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\\begin{document}" >> report.tmpl
-	echo "\\maketitle" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\section*{Current Weather}" >> report.tmpl
+	echo "\\documentclass{article}"                                                                    >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\usepackage{fancyhdr}"                                                                      >> report.tmpl
+	echo "\\usepackage{gensymb}"                                                                       >> report.tmpl
+	echo "\\usepackage{float}"                                                                         >> report.tmpl
+	echo "\\usepackage{graphicx}"                                                                      >> report.tmpl
+	echo "\\usepackage{caption}"                                                                       >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\pagestyle{myheadings}"                                                                     >> report.tmpl
+	echo "\\\fancyhf{}"                                                                                >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\\title{\$$CITY Weather Forecast}"                                                          >> report.tmpl
+	echo "\\\author{National Weather Service}"                                                         >> report.tmpl
+	echo "\\\rhead{National Oceanic and Atmospheric Administration}"                                   >> report.tmpl
+	echo "\\lhead{7-Day Forecast}"                                                                     >> report.tmpl
+	echo "\\\rfoot{forecast.weather.gov}"                                                              >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\\newcommand\\loc{\$$LOC}"                                                                  >> report.tmpl
+	echo "\\\newcommand\\\currtempf{\$$CURRTEMPF}"                                                     >> report.tmpl
+	echo "\\\newcommand\\\currtempc{\$$CURRTEMPC}"                                                     >> report.tmpl
+	echo "\\\newcommand\\\weather{\$$WEATHER}"                                                         >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\\begin{document}"                                                                          >> report.tmpl
+	echo "\\maketitle"                                                                                 >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\section*{Current Weather}"                                                                 >> report.tmpl
 	echo "The current temperature at {\\loc} is {\\\currtempf}{\\degree}F, {\\\currtempc}{\\degree}C." >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\\begin{figure}[H]" >> report.tmpl
-	echo "\\\centering" >> report.tmpl
-	echo "\\includegraphics[width=1in]{image.png}" >> report.tmpl
-	echo "\\\caption*{\\\weather}" >> report.tmpl
-	echo "\\\end{figure}" >> report.tmpl
-	echo "" >> report.tmpl
-	echo "\\\end{document}" >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\\begin{figure}[H]"                                                                         >> report.tmpl
+	echo "\\\centering"                                                                                >> report.tmpl
+	echo "\\includegraphics[width=1in]{image.png}"                                                     >> report.tmpl
+	echo "\\\caption*{\\\weather}"                                                                     >> report.tmpl
+	echo "\\\end{figure}"                                                                              >> report.tmpl
+	echo ""                                                                                            >> report.tmpl
+	echo "\\\end{document}"                                                                            >> report.tmpl
 
 #recipe for the (illustration of weather conditions) image
 image:
